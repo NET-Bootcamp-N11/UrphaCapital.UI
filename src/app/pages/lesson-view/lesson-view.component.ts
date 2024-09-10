@@ -20,6 +20,7 @@ export class LessonViewComponent implements OnInit {
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer
   ) {}
+
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.lessonId = params.get('lessonId');
@@ -39,7 +40,7 @@ export class LessonViewComponent implements OnInit {
 
   getVideo() {
     if (this.lessonId) {
-      this._lessonService.getLessonVideo(+this.lessonId).subscribe(
+      this._lessonService.getLessonVideo(1).subscribe(
         (videoStream) => {
           const url = window.URL.createObjectURL(videoStream);
           this.videoUrl = this.sanitizer.bypassSecurityTrustUrl(url);
