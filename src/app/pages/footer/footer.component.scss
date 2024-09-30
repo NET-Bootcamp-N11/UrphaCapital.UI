@@ -77,4 +77,42 @@
     flex-direction: column;
     text-align: center;
   }
+
+  @media screen and (max-width: 500px) {
+    .footer-about h3 {
+      font-size: 20px;
+    } 
+
+    .footer-about p {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .footer-social h3 {
+      font-size: 20px;
+    }
+
+    .social-links li a {
+      font-size: 16px;
+    }
+
+    .social-links i {
+      font-size: 20px;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+    }
+
+    .social-links {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
 }
